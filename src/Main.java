@@ -76,9 +76,12 @@ public class Main {
         System.out.println("Задача 9");
         // Пишем код для задачи 9
         int accumulation = 29000;
-        int total = 0;
+        double total = 0;
+        double percent = 1.01;
         for (int i = 1; i < 13; i++) {
-            total += total / 100;
+            //total += total / 100;
+            // в первый месяц не на что начислять проценты, тк логично, что человек откладывает 29000 с зарплаты под конец месяца
+            total *= percent;
             total += accumulation;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
         }
